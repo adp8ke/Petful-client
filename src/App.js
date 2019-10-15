@@ -1,26 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import LandingPage from './routes/landing-page';
+import AdoptionPage from './routes/adoption-page';
+import AdoptedPage from './routes/adopted-page';
+import { Route, NavLink } from 'react-router-dom';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+
+  render(){
+    return (
+      <main>
+
+        <nav>
+          <NavLink to='/adoption-page'>asdf</NavLink>
+          <NavLink to='/adopted-page'>ghjkl</NavLink>
+        </nav>
+
+        <div className="App">
+          <Route exact path='/' component={LandingPage} />
+          <Route path='/adoption-page' component={AdoptionPage} />
+          <Route path='/adopted-page' component={AdoptedPage} />
+        </div>
+
+      </main>
+     
+    );
+  }
+
 }
 
 export default App;
