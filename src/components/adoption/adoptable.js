@@ -1,4 +1,5 @@
 import React from 'react';
+import './adoptable.css';
 
 
 class Adoptable extends React.Component{
@@ -23,13 +24,15 @@ class Adoptable extends React.Component{
 
       const { index } = this.state;
       let pets = this.props.pets;
-
-      if(pets.length > 0){
+      let adopt = this.props.adopt;
+      let user = this.props.user;
+      
+      if(pets.length > 0 && user === 'Arpan Patel'){
 
         return(
           <div>
             <img
-              className='pet-picture'
+              className='adoptable-pet-pic'
               src={pets[index].imageURL}
               alt={pets[index].imageDescription}
             />
@@ -37,10 +40,37 @@ class Adoptable extends React.Component{
             <p> Sex: {pets[index].sex}</p>       
             <p> Breed: {pets[index].breed}</p>       
             <p> Age: {pets[index].age}</p>       
-            <p> Story: {pets[index].story}</p>       
+            <p> Story: {pets[index].story}</p>
+
+            {index !== 0 && <button onClick={this.back}>See Previous</button>}   
+            {index === 0 && <button onClick={() => adopt()}>Adopt</button>}  
+            {index < pets.length - 1 && <button onClick={this.next}>See Next</button>}
+
           </div>
         );
           
+      }
+
+      else if(pets.length !== 0){
+        return(
+          <div>
+            <img
+              className='adoptable-pet-pic'
+              src={pets[index].imageURL}
+              alt={pets[index].imageDescription}
+            />
+            <p> Name: {pets[index].name}</p>  
+            <p> Sex: {pets[index].sex}</p>       
+            <p> Breed: {pets[index].breed}</p>       
+            <p> Age: {pets[index].age}</p>       
+            <p> Story: {pets[index].story}</p>
+  
+            {index !== 0 && <button onClick={this.back}>See Previous</button>}   
+            {index < pets.length - 1 && <button onClick={this.next}>See Next</button>}
+  
+          </div>
+        );
+            
       }
 
       else{

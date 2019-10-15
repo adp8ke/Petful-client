@@ -1,0 +1,13 @@
+.user {
+    display: inline-block;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.active-user{
+    background-color: pink;
+}
+
+.userSection{
+    display: block;
+}

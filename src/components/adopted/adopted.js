@@ -1,5 +1,6 @@
 import React from 'react';
 import AdoptedApiService from '../../services/adopted-service';
+import './adopted.css';
 
 
 class Adopted extends React.Component{
@@ -21,23 +22,21 @@ class Adopted extends React.Component{
 
       const { adopted } = this.state;
 
-      let adoptedList = adopted.map(pet => {
+      let adoptedList = adopted.map((pet, i) => {
         return(
-          <li key={pet.id}>
-            <img src={pet.imageURL} alt={pet.imageDescription}/>
+          <div key={i} className='adopted-pet'>
+            <img className='adopted-pet-pic' src={pet.imageURL} alt={pet.imageDescription}/>
             <h3>{pet.name}</h3>
             <p>{pet.age}</p>
             <p>{pet.breed}</p>
             <p>{pet.story}</p>
-          </li>
+          </div>
         );
       });
 
       return(
-        <div>
-          <ul>
-            {adoptedList}
-          </ul>  
+        <div>     
+          {adoptedList} 
         </div>
       );
     }
