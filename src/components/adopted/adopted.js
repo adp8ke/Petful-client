@@ -24,9 +24,8 @@ class Adopted extends React.Component{
       let adoptedList = adopted.map(pet => {
         return(
           <li key={pet.id}>
-            <img src={pet.imageURL}/>
-            <p>{pet.imageDescription}</p>
-            <p>{pet.name}</p>
+            <img src={pet.imageURL} alt={pet.imageDescription}/>
+            <h3>{pet.name}</h3>
             <p>{pet.age}</p>
             <p>{pet.breed}</p>
             <p>{pet.story}</p>

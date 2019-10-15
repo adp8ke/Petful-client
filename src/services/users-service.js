@@ -10,7 +10,7 @@ const usersApiService = {
   },
 
   updateUsers(){
-    return fetch(`${config.API_ENDPOINT}/cats`, {
+    return fetch(`${config.API_ENDPOINT}/users`, {
       method: 'PATCH'
     })
       .then(res =>
