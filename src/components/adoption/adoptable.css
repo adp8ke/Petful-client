@@ -1,5 +1,9 @@
 .adoptable-pet-pic{
     width: 300px;
     height: 300px;
-    object-fit: auto;
+    object-fit: contain;
+}
+
+.pet-container{
+    margin-bottom: 15px;
 }

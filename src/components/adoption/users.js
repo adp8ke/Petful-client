@@ -19,7 +19,7 @@ class Users extends React.Component{
 
     if(this.props.users.length > 0){
       return (
-        <section>
+        <section className='userSection'>
           <h2>People in line to adopt</h2>
           <div className='usersList'>{this.renderUsers()}</div>
         </section>

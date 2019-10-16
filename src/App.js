@@ -11,9 +11,9 @@ class App extends React.Component {
     return (
       <main>
 
-        <nav>
-          <NavLink to='/adoption-page'>asdf</NavLink>
-          <NavLink to='/adopted-page'>ghjkl</NavLink>
+        <nav className='nav'>
+          <NavLink to='/adoption-page'>Adopt</NavLink>
+          <NavLink to='/adopted-page'>See Adopted</NavLink>
         </nav>
 
         <div className="App">

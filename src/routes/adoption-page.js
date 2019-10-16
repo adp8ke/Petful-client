@@ -91,21 +91,21 @@ class AdoptionPage extends React.Component{
     if(cats !== null){
       return(
         <>
+          <section className='userSection'>
+            <Users users={users}/>
+          </section>
+          
           <div className='adoptable-container'>
-            <section>
+            <section className='information-container'>
               <h2>Dogs</h2>
               <Adoptable pets={dogs} adopt={this.deleteDog} user={user}/>
             </section>
 
-            <section>
+            <section className='information-container'>
               <h2>Cats</h2>
               <Adoptable pets={cats} adopt={this.deleteCat} user={user}/>
             </section>
           </div>
-  
-          <section className='userSection'>
-            <Users users={users}/>
-          </section>
         </>
       );
     }

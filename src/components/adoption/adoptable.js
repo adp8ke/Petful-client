@@ -30,7 +30,7 @@ class Adoptable extends React.Component{
       if(pets.length > 0 && user === 'Arpan Patel'){
 
         return(
-          <div>
+          <div className='pet-container'>
             <img
               className='adoptable-pet-pic'
               src={pets[index].imageURL}
@@ -54,7 +54,7 @@ class Adoptable extends React.Component{
 
       else if(pets.length !== 0){
         return(
-          <div>
+          <div className='pet-container'>
             <img
               className='adoptable-pet-pic'
               src={pets[index].imageURL}

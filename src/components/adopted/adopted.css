@@ -1,11 +1,12 @@
 .adopted-pet{
     display: inline-block;
-    width: 310px;
-    height: 450px;
+    width: 500px;
+    height: 500px;
+    padding: 30px;
 }
 
 .adopted-pet-pic{
     width: 300px;
     height: 300px;
-    object-fit: auto;
+    object-fit: contain;
 }
