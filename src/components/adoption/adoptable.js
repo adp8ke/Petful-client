@@ -36,6 +36,7 @@ class Adoptable extends React.Component{
               src={pets[index].imageURL}
               alt={pets[index].imageDescription}
             />
+            <p> Description: {pets[index].imageDescription}</p>  
             <p> Name: {pets[index].name}</p>  
             <p> Sex: {pets[index].sex}</p>       
             <p> Breed: {pets[index].breed}</p>       
@@ -59,6 +60,7 @@ class Adoptable extends React.Component{
               src={pets[index].imageURL}
               alt={pets[index].imageDescription}
             />
+            <p> Description: {pets[index].imageDescription}</p>  
             <p> Name: {pets[index].name}</p>  
             <p> Sex: {pets[index].sex}</p>       
             <p> Breed: {pets[index].breed}</p>       

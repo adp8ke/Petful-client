@@ -26,10 +26,11 @@ class Adopted extends React.Component{
         return(
           <div key={i} className='adopted-pet'>
             <img className='adopted-pet-pic' src={pet.imageURL} alt={pet.imageDescription}/>
-            <h3>{pet.name}</h3>
-            <p>{pet.age}</p>
-            <p>{pet.breed}</p>
-            <p>{pet.story}</p>
+            <h3> Name: {pet.name}</h3>
+            <p> Description: {pet.imageDescription}</p>
+            <p> Age: {pet.age}</p>
+            <p> Breed: {pet.breed}</p>
+            <p> Story: {pet.story}</p>
           </div>
         );
       });
