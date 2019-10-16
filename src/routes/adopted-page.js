@@ -9,7 +9,7 @@ class AdoptedPage extends React.Component{
     return(
       <div>
         <div>
-          <p>Adopted Page</p>
+          <h2>Pets Who Have Found Their Furever Homes</h2>
         </div>
 
         <div>

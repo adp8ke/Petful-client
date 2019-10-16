@@ -26,6 +26,7 @@ class Adoptable extends React.Component{
       let pets = this.props.pets;
       let adopt = this.props.adopt;
       let user = this.props.user;
+      let error = this.props.error;
       
       if(pets.length > 0 && user === 'Arpan Patel'){
 
@@ -78,7 +79,7 @@ class Adoptable extends React.Component{
       else{
         return(
           <div>
-            <h2>Sorry, all pets have been adopted, please come back later!</h2>
+            {error && <h2>Sorry, all pets have been adopted, please come back later!</h2>}
           </div>
         );
       }

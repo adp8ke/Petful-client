@@ -14,6 +14,7 @@ class AdoptionPage extends React.Component{
     dogs: [],
     users: [],
     user: {},
+    error: {},
   }
 
   componentDidMount(){
@@ -23,14 +24,19 @@ class AdoptionPage extends React.Component{
         this.setState({
           cats: res
         });
-      });
+      })
+      .catch(res => this.setState({error: res.message}));
 
     dogsApiService.getDogs()
       .then(res => {
         this.setState({
           dogs: res
         });
-      });
+      })
+      .catch(res => {
+        this.setState({error: res.message});
+      }
+      );
 
     usersApiService.getUsers()
       .then(res => {
@@ -43,7 +49,7 @@ class AdoptionPage extends React.Component{
 
     this.interval = setInterval(() => {
       this.updateUser();
-    }, 10000);
+    }, 5000);
 
   }
 
@@ -86,7 +92,7 @@ class AdoptionPage extends React.Component{
   }
 
   render(){
-    const { cats, dogs, users, user } = this.state;
+    const { cats, dogs, users, user, error } = this.state;
 
     if(cats !== null){
       return(
@@ -98,12 +104,12 @@ class AdoptionPage extends React.Component{
           <div className='adoptable-container'>
             <section className='information-container'>
               <h2>Dogs</h2>
-              <Adoptable pets={dogs} adopt={this.deleteDog} user={user}/>
+              <Adoptable pets={dogs} adopt={this.deleteDog} user={user} error={error}/>
             </section>
 
             <section className='information-container'>
               <h2>Cats</h2>
-              <Adoptable pets={cats} adopt={this.deleteCat} user={user}/>
+              <Adoptable pets={cats} adopt={this.deleteCat} user={user} error={error}/>
             </section>
           </div>
         </>
