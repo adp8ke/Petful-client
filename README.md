@@ -1,4 +1,44 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## APSPCA
+
+This app helps lonely fur babies find their furever homes. This app utilizes a queue system in which the pets are adoptable first in and first out, and adopters are first come first serve. This app's user is defaulted to "Arpan Patel", as in me. As a user, you can also see a list of pets that already have been adopted. 
+
+### Created By
+- Arpan Patel
+
+## Links
+- Live App: https://arpan-petful.now.sh
+- Live Server: https://calm-basin-50709.herokuapp.com/
+- Client Repo: https://github.com/adp8ke/Petful-client
+- Server Repo: https://github.com/adp8ke/Petful-server
+
+## API Documentation
+
+`/api/dogs`
+  - GET - GET request to recieve an array of available dogs in a queue format
+  - DELETE - DELETE request to remove the adopted pet and queue them into the adopted queue
+
+`/api/cats`
+  - GET - GET request to recieve an array of available cats in a queue format
+  - DELETE - DELETE request to remove the adopted pet and queue them into the adopted queue
+
+`/api/adopted`
+  - GET - GET request to recieve an array of adopted pets in a queue format
+
+`/api/users`
+  - GET - GET request to recieve an array of users in a queue format
+  - PATCH - PATCH request to remove the current user and palce them to the end of the user queue
+
+## Tech Stack:
+- HTML
+- CSS
+- Javascript
+- React
+- Express
+- Node
+- Zeit
+- Heroku
+- Git
+- GitHub
 
 ## Available Scripts
 
